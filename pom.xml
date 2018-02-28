@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.va.cxf.rest</groupId>
+	<artifactId>cxf-rest-war</artifactId>
+	<packaging>war</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>cxf-rest-war Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<lib.versions.cxf>2.7.8</lib.versions.cxf>
+		<lib.versions.spring>3.2.5.RELEASE</lib.versions.spring>
+	</properties>
+	
+	<dependencies>
+	
+		<!--  Spring dependencies -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${lib.versions.spring}</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${lib.versions.spring}</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${lib.versions.spring}</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${lib.versions.spring}</version>
+			<scope>runtime</scope>
+		</dependency>
+	
+	
+	<!-- Apache CXF for JAX-RS -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+			<version>${lib.versions.cxf}</version>
+			<scope>runtime</scope>
+		</dependency> 
+	
+	<!-- Following dependencies required for CXF REST JSON support -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-extension-providers</artifactId>
+			<version>${lib.versions.cxf}</version>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.codehaus.jettison</groupId>
+			<artifactId>jettison</artifactId>
+			<version>1.3.4</version>
+			<scope>runtime</scope>
+		</dependency> 
+			
+		<!-- Javax dependency required for compilation -->
+			
+		<dependency>
+			<groupId>javax</groupId>  
+			<artifactId>javaee-api</artifactId>  
+			<version>6.0</version>  
+			<!-- Needed for compilation but not required to be packaged as is provided by web server at runtime -->
+			<scope>provided</scope>
+		</dependency>
+			
+	</dependencies>
+	<build>
+		<finalName>cxf-rest-war</finalName>
+	</build>
+</project>
