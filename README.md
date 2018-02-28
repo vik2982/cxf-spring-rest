@@ -15,6 +15,6 @@ Then copy the war file in the target folder to the Tomcat webapps directory
 
 ### URL example
 
-* Get all teams - http://http://localhost:8080/cxf-rest-war/rest/additionservice/66/6
+http://localhost:8080/cxf-rest-war/rest/additionservice/66/6
 
 
