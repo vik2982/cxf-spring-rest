@@ -44,7 +44,7 @@
 		</dependency>
 	
 	
-	<!-- Apache CXF for JAX-RS -->
+		<!-- Apache CXF for JAX-RS -->
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
@@ -52,7 +52,7 @@
 			<scope>runtime</scope>
 		</dependency> 
 	
-	<!-- Following dependencies required for CXF REST JSON support -->
+		<!-- Following dependencies required for CXF REST JSON support -->
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-rs-extension-providers</artifactId>
@@ -73,12 +73,14 @@
 			<groupId>javax</groupId>  
 			<artifactId>javaee-api</artifactId>  
 			<version>6.0</version>  
-			<!-- Needed for compilation but not required to be packaged as is provided by web server at runtime -->
+			<!-- Needed for compilation but not required to be packaged -->
 			<scope>provided</scope>
 		</dependency>
 			
 	</dependencies>
+	
 	<build>
 		<finalName>cxf-rest-war</finalName>
 	</build>
+	
 </project>
