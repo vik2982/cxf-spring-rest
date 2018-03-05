@@ -1,4 +1,4 @@
-package com.va.cxf.rest;
+package com.va.cxf.rest.service;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

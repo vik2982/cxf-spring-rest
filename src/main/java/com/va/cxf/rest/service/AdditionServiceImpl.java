@@ -1,8 +1,8 @@
-package com.va.cxf.rest;
+package com.va.cxf.rest.service;
 
 import javax.ws.rs.core.Response;
 
-import com.va.cxf.rest.calc.Calculator;
+import com.va.cxf.rest.business.Calculator;
 import com.va.cxf.rest.model.Addition;
 
 public class AdditionServiceImpl implements AdditionService{
@@ -19,12 +19,10 @@ public class AdditionServiceImpl implements AdditionService{
 	}
 
 	public Response add(int valueOne, int valueTwo) {
-		
 		addition.setValueOne(valueOne);
 		addition.setValueTwo(valueTwo);
 		calculator.add(addition);
 		return Response.ok(addition).build();
-		 
 	}
 
 }

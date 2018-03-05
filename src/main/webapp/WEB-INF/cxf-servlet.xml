@@ -22,13 +22,13 @@
 		</jaxrs:providers>
 	</jaxrs:server>
 
-	<bean id="additionServiceImpl" class="com.va.cxf.rest.AdditionServiceImpl">
+	<bean id="additionServiceImpl" class="com.va.cxf.rest.service.AdditionServiceImpl">
 		<property name="addition" ref="addition" />
 		<property name="calculator" ref="calculatorImpl" />
 	</bean>
 
 	<bean id="addition" class="com.va.cxf.rest.model.Addition" />
 
-	<bean id="calculatorImpl" class="com.va.cxf.rest.calc.CalculatorImpl" />
+	<bean id="calculatorImpl" class="com.va.cxf.rest.business.CalculatorImpl" />
 
 </beans>
