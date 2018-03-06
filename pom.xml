@@ -11,7 +11,7 @@
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<lib.versions.cxf>2.7.8</lib.versions.cxf>
+		<lib.versions.cxf>3.2.2</lib.versions.cxf>
 		<lib.versions.spring>3.2.5.RELEASE</lib.versions.spring>
 	</properties>
 	
